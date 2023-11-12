@@ -11,6 +11,9 @@ server.use(morgan('dev'));
 server.use(express.json())
 server.use(cookieParser());
 
+server.get('/',(req,res)=>{
+    res.send('conexion correcta')
+})
 server.use("/api",authRoutes);
 server.use("/api",itemRoutes);
 
