@@ -6,10 +6,10 @@ router.get("/items",controller.showItems);
 
 router.get("/items/:id",controller.showOneItem);
 
-router.post("/items",authRequired,controller.createItems);
+router.post("/items",controller.createItems);
 
-router.put("/items/:id",authRequired,controller.updateItems);
+router.put("/items/:id",controller.updateItems);
 
-router.delete("/items/:id",authRequired,controller.deleteItem);
+router.delete("/items/:id",controller.deleteItem);
 
 module.exports = router
